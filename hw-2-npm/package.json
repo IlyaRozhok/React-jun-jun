@@ -1,0 +1,36 @@
+{
+  "name": "junjun-npm-hw",
+  "version": "1.0.0",
+  "description": "my npm project",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IlyaRozhok/junjun-npm-hw.git"
+  },
+  "keywords": [
+    "npm",
+    "npx",
+    "lodash",
+    "prettier",
+    "gitignore",
+    "shell",
+    "command-line",
+    "unix"
+  ],
+  "author": "Ilya Rozhok",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IlyaRozhok/junjun-npm-hw/issues"
+  },
+  "homepage": "https://github.com/IlyaRozhok/junjun-npm-hw#readme",
+  "devDependencies": {
+    "eslint": "^8.13.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "lodash": "^4.17.21",
+    "prettier": "^2.6.2"
+  }
+}
