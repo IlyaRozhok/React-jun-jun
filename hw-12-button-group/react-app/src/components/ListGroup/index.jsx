@@ -5,20 +5,27 @@ import cn from "classnames";
 
 const BtnGroup = () => {
 
-    const [isPressed, setState] = useState(false);
-    const handleClick = () => setState(isPressed => !isPressed)
+    const [isPressed, setState] = useState(null);
+
+    const clickOnTheLeft = () => setState(isPressed => 'left');
+    const clickOnTheRight = () => setState(isPressed => 'right');
+
 
     const leftButton = cn({
-        'btn-secondary': isPressed,
+        'primary': isPressed === 'left',
+        'secondary': !isPressed || isPressed === 'right'
     })
+
     const rightButton = cn({
-        'btn-secondary': !isPressed,
+        'primary': isPressed === 'right',
+        'secondary': !isPressed || isPressed === 'left'
     })
+
 
     return (
         <ButtonGroup>
-            <Button onClick={handleClick} className={leftButton}>Left</Button>
-            <Button onClick={handleClick} className={rightButton}>Right</Button>
+            <Button onClick={clickOnTheLeft} variant={leftButton}>Left</Button>
+            <Button onClick={clickOnTheRight} variant={rightButton}>Right</Button>
         </ButtonGroup>
     )
 };
