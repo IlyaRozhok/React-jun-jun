@@ -2,15 +2,12 @@ import './style.css'
 
 const Card = ({title, text}) => {
     return (
-        title || text ?
         <div className="card">
             <div className="card-body">
-                <h4 className="card-title">{title}</h4>
-                <p className="card-text">{text}</p>
+                {title ? <h4 className="card-title">{title}</h4> : null}
+                {text ? <p className="card-text">{text}</p> : null}
             </div>
         </div>
-            :
-            null
     )
 };
 
